@@ -23,9 +23,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/fontello/css/fontello.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/JS/smoke.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -90,12 +93,18 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "src/assets/fontello/css/fontello.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/JS/smoke.js"
+            ]
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "3355dee3-425a-4bc8-b9b7-e8eb6b1b7834"
   }
 }

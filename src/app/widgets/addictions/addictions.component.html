@@ -1,0 +1,31 @@
+<div class="chemical-title">
+  <ng-container *ngFor="let letter of chemical">
+    <div [innerHTML]="letter"></div>
+  </ng-container>
+</div>
+<div class="non-chemical-title">
+  <ng-container *ngFor="let letter of nonChemical">
+    <div [innerHTML]="letter"></div>
+  </ng-container>
+</div>
+
+<div class="addictions">
+  <div class="chemical-addictions-container">
+    <div class="chemical-addictions">
+      <ng-container *ngFor="let icon of chemicalAddictions">
+        <div class="icon">
+          <i [ngClass]="[icon]"></i>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <div class="non-chemical-addictions-container">
+    <div class="non-chemical-addictions">
+      <ng-container *ngFor="let icon of nonChemicalAddictions">
+        <div class="icon">
+          <i [ngClass]="[icon]"></i>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,123 @@
+.addiction-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 150;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.addiction-smoke,
+.addiction-insane,
+.addiction {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Shadows Into Light';
+    font-size: 22.57vh;
+    filter: blur(150px);
+    opacity: 0;
+}
+
+.addiction-smoke {
+    opacity: 0;
+    filter: blur(25px);
+    transform-origin: center;
+    transform: translate(0,0), skew(0deg);
+    animation: addiction-smoke-opacity 15s 5s linear infinite forwards,
+               addiction-smoke-transform 20s 0s ease-in-out infinite forwards;
+    transition: opacity 1s linear;
+}
+@keyframes addiction-smoke-opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes addiction-smoke-transform {
+    0% {
+        transform: translate(0,0), skew(0deg);
+    }
+    40% {
+        transform: translate(10px,10px), skew(30deg);
+    }
+    70% {
+        transform: translate(-10px,-10px), skew(-30deg);
+    }
+    100% {
+        transform: translate(0,0), skew(0deg);
+    }
+}
+
+.addiction-insane {
+    color: rgba(0,0,0,0.6);
+    transform-origin: center;
+    transform: scale(1);
+    animation: addiction-opacity 10s 5s ease-in-out 1 forwards,
+               addiction-insane-transform 10s 1.5s ease-in-out infinite alternate,
+               addiction-blur 0s 1.5s ease-in-out 1 forwards;
+}
+@keyframes addiction-insane-transform {
+    0% {
+        transform: scale(1);
+    }
+    35% {
+        transform: scale(1.05), translate(10px, 10px);
+    }
+    70% {
+        transform: scale(1.05), translate(-10px, -10px);
+    }
+}
+
+.addiction {
+    transform-origin: center;
+    transform: skew(0deg);
+    animation: addiction-opacity 5s 4s ease-in-out 1 forwards,
+               addiction-skew 10s 0.25s ease-in-out infinite alternate,
+               addiction-blur 1s 0.25s ease-in-out 1 forwards;
+}
+@keyframes addiction-opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes addiction-skew {
+    0% {
+        transform: skew(0deg);
+    }
+    35% {
+        transform: skew(-1.5deg);
+    }
+    70% {
+        transform: skew(1.5deg);
+    }
+    100% {
+        transform: skew(0deg);
+    }
+}
+@keyframes addiction-blur {
+    0% {
+        filter: blur(150px);
+    }
+    100% {
+        filter: blur(0px);
+    }
+}

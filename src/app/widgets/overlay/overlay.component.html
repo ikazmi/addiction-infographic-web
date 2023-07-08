@@ -1,0 +1,10 @@
+<div
+  class="overlay"
+  [ngClass]="{ 'fade-in': animation == 0, 'fade-out': animation == 1 }"
+  [ngStyle]="{
+    'background-color': background,
+    'animation-delay': delay + 's',
+    'animation-duration': duration + 's',
+    'z-index': zIndex
+  }"
+></div>
